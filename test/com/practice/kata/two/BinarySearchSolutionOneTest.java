@@ -2,24 +2,31 @@ package com.practice.kata.two;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class BinarySearchSolutionOneTest
 {
-   int[] arrayListZero  = {};
-   int[] arrayListOne   = { 1 };
-   int[] arrayListThree = { 1,
-                            3,
-                            5 };
-   int[] arrayListFour  = { 1,
-                            3,
-                            5,
-                            7 };
+   BinarySearchSolutionOne binarySearchSolutionOne;
+   int[]                   arrayListZero  = {};
+   int[]                   arrayListOne   = { 1 };
+   int[]                   arrayListThree = { 1,
+                                              3,
+                                              5 };
+   int[]                   arrayListFour  = { 1,
+                                              3,
+                                              5,
+                                              7 };
+
+   @Before
+   public void setUp()
+   {
+      binarySearchSolutionOne = new BinarySearchSolutionOne();
+   }
 
    @Test
    public void givenAnEmptyArrayShouldReturnNegative()
    {
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 20,
                                                                  arrayListZero ) );
@@ -28,7 +35,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtOneArrayAndANonExistingNumberShouldReturnNegative()
    {
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 3,
                                                                  arrayListOne ) );
@@ -37,7 +43,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtOneArrayAndAExistingNumberShouldReturnZero()
    {
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 0,
                     binarySearchSolutionOne.searchNumberInArray( 1,
                                                                  arrayListOne ) );
@@ -46,8 +51,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtThreeArrayAndFirstExistingNumberShouldReturnZero()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 0,
                     binarySearchSolutionOne.searchNumberInArray( 1,
                                                                  arrayListThree ) );
@@ -56,8 +59,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtThreeArrayAndSecondExistingNumberShouldReturnOne()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 1,
                     binarySearchSolutionOne.searchNumberInArray( 3,
                                                                  arrayListThree ) );
@@ -66,8 +67,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtThreeArrayAndThirdExistingNumberShouldReturnTwo()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 2,
                     binarySearchSolutionOne.searchNumberInArray( 5,
                                                                  arrayListThree ) );
@@ -76,8 +75,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtThreeArrayAndFirstNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 0,
                                                                  arrayListThree ) );
@@ -86,8 +83,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtThreeArrayAndSecondNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 2,
                                                                  arrayListThree ) );
@@ -96,8 +91,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtThreeArrayAndThirdNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 4,
                                                                  arrayListThree ) );
@@ -106,8 +99,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtThreeArrayAndFourthNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 6,
                                                                  arrayListThree ) );
@@ -116,8 +107,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndFirstExistingNumberShouldReturnZero()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 0,
                     binarySearchSolutionOne.searchNumberInArray( 1,
                                                                  arrayListFour ) );
@@ -126,8 +115,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndSecondExistingNumberShouldReturnOne()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 1,
                     binarySearchSolutionOne.searchNumberInArray( 3,
                                                                  arrayListFour ) );
@@ -136,8 +123,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndThirdExistingNumberShouldReturnTwo()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 2,
                     binarySearchSolutionOne.searchNumberInArray( 5,
                                                                  arrayListFour ) );
@@ -146,8 +131,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndFourthExistingNumberShouldReturnThree()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( 3,
                     binarySearchSolutionOne.searchNumberInArray( 7,
                                                                  arrayListFour ) );
@@ -156,8 +139,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndFirstNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 0,
                                                                  arrayListFour ) );
@@ -166,8 +147,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndSecondNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 2,
                                                                  arrayListFour ) );
@@ -176,8 +155,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndThirdNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 4,
                                                                  arrayListFour ) );
@@ -186,8 +163,6 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndFourthNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 6,
                                                                  arrayListFour ) );
@@ -196,11 +171,8 @@ public class BinarySearchSolutionOneTest
    @Test
    public void givenALenghtFiveArrayAndFifthNonExistingNumberShouldReturnNegative()
    {
-
-      BinarySearchSolutionOne binarySearchSolutionOne = new BinarySearchSolutionOne();
       assertEquals( -1,
                     binarySearchSolutionOne.searchNumberInArray( 8,
                                                                  arrayListFour ) );
    }
-
 }
