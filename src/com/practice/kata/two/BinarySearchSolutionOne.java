@@ -1,6 +1,6 @@
 package com.practice.kata.two;
 
-public class BinarySearchSolutionOne< T >
+public class BinarySearchSolutionOne
 {
 
    int searchNumberInArray( int x,
